@@ -5,22 +5,6 @@ from .models import Form
 
 
 class FormAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email")
-    search_fields = ("first_name", "last_name", "email")
-    list_filter = ("date", "occupation")
-    ordering = ("first_name",)
-    readonly_fields = ("email", "occupation",)
-
-
-admin.site.register(Form, FormAdmin)
-
-from django.contrib import admin
-
-# Import the Form model to manage it through the Django admin interface
-from .models import Form
-
-
-class FormAdmin(admin.ModelAdmin):
     """
     Custom admin configuration for the Form model.
     Controls how job application submissions are displayed and managed in the admin panel.
