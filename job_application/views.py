@@ -42,3 +42,6 @@ def index(request):
 
     # Render the form page (both GET and after POST)
     return render(request, "index.html")
+
+def about(request):
+    return render(request, "about.html")
